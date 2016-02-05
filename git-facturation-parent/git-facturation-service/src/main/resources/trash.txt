@@ -1,0 +1,16 @@
+//	private void traceCellHeight(PdfPCell c){
+//		LOG.debug("Cell - max {} - min {}", c.getMaxHeight() , c.getMinimumHeight());
+//		LOG.debug("Cell - fixedHeight {} - height {}", c.getFixedHeight() , c.getHeight());
+//	}
+//
+//	LOG.debug("Table total height: {}", t.getTotalHeight());
+//	LOG.debug("Table total width: {}", t.getTotalWidth());
+//	for (int i = 0; i < nb; i++) {
+//		PdfPRow r = t.getRow(i);
+//		LOG.debug("Table rows[{}] calculateHeights : {}",i , r.calculateHeights());
+//		LOG.debug("Table rows[{}] maxheight : {}", i, r.getMaxHeights());
+////		PdfPCell[] cs = r.getCells();
+////		for (int j = 0; j < cs.length; j++) {
+////			traceCellHeight(cs[j]);
+////		}
+//	}
