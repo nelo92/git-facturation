@@ -120,7 +120,7 @@ public class CreatePdf {
 	// Methods / Private ------------------------------------------------------
 
 	private PdfPCell printMessage(String s) throws Exception {
-		PdfPCell c = new PdfPCell(new Phrase(s, FONT));
+		PdfPCell c = createCell(s);
 		c.setBorder(PdfPCell.NO_BORDER);
 		c.setColspan(2);
 		return c;
@@ -158,9 +158,8 @@ public class CreatePdf {
 	}
 
 	private PdfPCell printTitre() throws Exception {
-		PdfPCell c ;
 		PdfPTable t = new PdfPTable(1);
-		c = new PdfPCell();
+		PdfPCell c = new PdfPCell();
 		c.setCellEvent(new RoundRectangleCellEvent());
 		c.setBorder(PdfPCell.NO_BORDER);
 		c.addElement(printTitreContent());
@@ -173,17 +172,20 @@ public class CreatePdf {
 
 	private PdfPTable printTitreContent() {
 		PdfPTable t = new PdfPTable(1);
-		PdfPCell c= new PdfPCell();
+		PdfPCell c = new PdfPCell();
 		c.setBorder(PdfPCell.NO_BORDER);
-		c.addElement(new Phrase("FACTURE EN "+ facture.getUniteMonetaire(), FONT));
+		c.setVerticalAlignment(Element.ALIGN_MIDDLE);
+		c.addElement(createPhrase("FACTURE EN "+ facture.getUniteMonetaire()));
 		t.addCell(c);
 		c = new PdfPCell();
 		c.setBorder(PdfPCell.NO_BORDER);
-		c.addElement(new Phrase("N� "+ facture.getNumero(), FONT));
+		c.setVerticalAlignment(Element.ALIGN_MIDDLE);
+		c.addElement(createPhrase("N� "+ facture.getNumero()));
 		t.addCell(c);
 		c = new PdfPCell();
 		c.setBorder(PdfPCell.NO_BORDER);
-		c.addElement(new Phrase("Emise " + DateUtils.dateToString(facture.getDateEmission()), FONT));
+		c.setVerticalAlignment(Element.ALIGN_MIDDLE);
+		c.addElement(createPhrase("Emise " + DateUtils.dateToString(facture.getDateEmission())));
 		t.addCell(c);
 		return t;
 	}
@@ -297,7 +299,7 @@ public class CreatePdf {
 		c.setHorizontalAlignment(Element.ALIGN_CENTER);
 		c.setVerticalAlignment(Element.ALIGN_TOP);
 		t.addCell(c);
-		// Contenu - TODO A completer
+		// Contenu
 		t.addCell(createCell(""));
 		t.addCell(createCell(""));
 		t.addCell(createCell(""));

@@ -26,7 +26,7 @@ public class MockFacture extends Facture {
 		factureLigne.setDescription("PRES DESCRIPTION");
 		factureLigne.setPrixUnitaireHT(new Float(500));
 		factureLigne.setQuantite(new Float(22));
-		factureLigne.setTva(new Tva(1, 20));
+		factureLigne.setTva(new Tva(1,20));
 		factureLigne.setMontantHT(new Float(5000));
 
 		List<FactureLigne>factureLignes = new ArrayList<FactureLigne>();

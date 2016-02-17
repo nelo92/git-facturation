@@ -9,7 +9,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import fr.ma.facturation.helper.FactureHelper;
 import fr.ma.facturation.utils.ToStringStyle;
 
-@SuppressWarnings("unused")
 public class Facture implements Serializable {
 
 	// Constantes -------------------------------------------------------------
@@ -101,7 +100,10 @@ public class Facture implements Serializable {
 	}
 
 	public Float getTotalTVA() {
-		return (totalTVA=(FactureHelper.calculTotalTva(this)));
+		if(totalTVA==null){
+			totalTVA=FactureHelper.calculTotalTva(this);
+		}
+		return totalTVA;
 	}
 
 	public void setTotalTVA(Float totalTVA) {
@@ -109,7 +111,10 @@ public class Facture implements Serializable {
 	}
 
 	public Float getTotalHT() {
-		return (totalHT=FactureHelper.calculTotalMontantHt(this));
+		if(totalHT==null){
+			totalHT=FactureHelper.calculTotalMontantHt(this);
+		}
+		return totalHT;
 	}
 
 	public void setTotalHT(Float totalHT) {
@@ -117,7 +122,10 @@ public class Facture implements Serializable {
 	}
 
 	public Float getTotalTTC() {
-		return (totalTTC=FactureHelper.calculTotalMontantTtc(this));
+		if(totalTTC==null){
+			totalTTC=FactureHelper.calculTotalMontantTtc(this);
+		}
+		return totalTTC;
 	}
 
 	public void setTotalTTC(Float totalTTC) {
@@ -133,7 +141,10 @@ public class Facture implements Serializable {
 	}
 
 	public Float getNetaPaye() {
-		return (netaPaye=FactureHelper.calculNetaPaye(this));
+		if(netaPaye==null){
+			netaPaye=FactureHelper.calculNetaPaye(this);
+		}
+		return netaPaye;
 	}
 
 	public void setNetaPaye(Float netaPaye) {
@@ -141,6 +152,7 @@ public class Facture implements Serializable {
 	}
 
 	// Methods ----------------------------------------------------------------
+
 
 	@Override
 	public String toString() {

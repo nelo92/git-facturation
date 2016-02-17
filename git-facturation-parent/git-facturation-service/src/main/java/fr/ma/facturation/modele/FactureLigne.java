@@ -7,7 +7,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import fr.ma.facturation.helper.FactureHelper;
 import fr.ma.facturation.utils.ToStringStyle;
 
-@SuppressWarnings("unused")
 public class FactureLigne implements Serializable {
 
 	// Constantes -------------------------------------------------------------
@@ -66,7 +65,10 @@ public class FactureLigne implements Serializable {
 		this.tva = tva;
 	}
 	public Float getMontantHT() {
-		return (montantHT=FactureHelper.calculMontantHt(this));
+		if(montantHT==null){
+			montantHT=FactureHelper.calculMontantHt(this);
+		}
+		return montantHT;
 	}
 	public void setMontantHT(Float montantHT) {
 		this.montantHT = montantHT;
