@@ -1,1 +1,59 @@
-<!-- TODO -->
+<facture>
+	
+	<numero></numero>
+	<uniteMonetaire></uniteMonetaire>
+	<dateEmission></dateEmission>
+	<messageEntete></messageEntete>
+	<messageBasDePage></messageBasDePage>
+	
+	<vendeur>	
+		<nom></nom>
+		<numIdentification></numIdentification>
+		<adresse>
+			<ligne1></ligne1>
+			<ligne2></ligne2>
+			<codepostal></codepostal>
+			<ville></ville>
+			<pays></pays>
+		</adresse>
+		<contact>
+			<nom></nom>
+			<prenom></prenom>
+			<mail></mail>
+			<telephone></telephone>
+		</contact>
+	</vendeur>
+	
+	<acheteur>
+		<nom></nom>
+		<numIdentification></numIdentification>
+		<adresse>
+			<ligne1></ligne1>
+			<ligne2></ligne2>
+			<codepostal></codepostal>
+			<ville></ville>
+			<pays></pays>
+		</adresse>
+		<contact>
+			<nom></nom>
+			<prenom></prenom>
+			<mail></mail>
+			<telephone></telephone>
+		</contact>
+	</acheteur>
+	
+	<lignes>
+		<ligne>
+			<reference></reference>
+			<description></description>
+			<unite></unite>
+			<prixUnitaireHT></prixUnitaireHT>
+			<quantite></quantite>
+			<tva>
+				<ref></ref>
+				<value></value>
+			</tva>
+		</ligne>
+	</lignes>
+	
+</facture>

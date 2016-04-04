@@ -1,25 +1,29 @@
-package fr.ma.facturation.modele;
+package fr.ma.facturation.xml.element;
 
-import java.io.Serializable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
 import fr.ma.facturation.utils.ToStringStyle;
 
-public class Tva implements Serializable {
-
-	// Constantes -------------------------------------------------------------
-
-	private static final long	serialVersionUID	= -8669623567670046884L;
+@XmlAccessorType(XmlAccessType.FIELD)
+public class TvaElement {
 
 	// Attributs --------------------------------------------------------------
 
+	@XmlAttribute(name="ref", required=true)
 	private Integer  ref;
+	@XmlAttribute(name="value", required=true)
 	private Float value;
 
 	// Constructeurs ----------------------------------------------------------
 
-	public Tva(Integer id, Float value) {
+	public TvaElement() {
+	}
+
+	public TvaElement(Integer id, Float value) {
 		this.ref = id;
 		this.value = value;
 	}
@@ -43,7 +47,6 @@ public class Tva implements Serializable {
 	}
 
 	// Methods ----------------------------------------------------------------
-
 
 	@Override
 	public String toString() {

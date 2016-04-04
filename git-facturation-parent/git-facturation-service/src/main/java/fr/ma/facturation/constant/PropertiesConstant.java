@@ -70,7 +70,8 @@ public final class PropertiesConstant {
 	public static final String FACTURE_UNITE_MONETAIRE = "facture.uniteMonetaire";
 	public static final String FACTURE_DATE_EMISSION = "facture.dateEmission";
 	public static final String FACTURE_MESSAGE_ENTETE = "facture.messageEntete";
-	public static final String FACTURE_MESSAGE_BASDEPAGE= "facture.messageBasDePage";
+	public static final String FACTURE_MESSAGE_BASDEPAGE = "facture.messageBasDePage";
+	public static final String FACTURE_NB_LIGNE = "facture.nbligne";
 
 	// ------------------------------------------------------------------------
 	// Ligne de Facture

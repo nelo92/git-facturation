@@ -48,6 +48,11 @@
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-context</artifactId>
   		<version>3.0.6.RELEASE</version>
-  	</dependency>
+  	</dependency>  	
+  	<dependency>
+		<groupId>com.sun.xml.bind</groupId>
+		<artifactId>jaxb-impl</artifactId>
+		<version>2.2.7-b60</version>		
+	</dependency>
   </dependencies>
 </project>

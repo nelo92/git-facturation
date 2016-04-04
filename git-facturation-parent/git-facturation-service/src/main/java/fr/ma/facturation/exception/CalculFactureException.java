@@ -23,8 +23,7 @@ public class CalculFactureException extends Exception {
 		super(message, cause);
 	}
 
-	public CalculFactureException(String message, Throwable cause, boolean enableSuppression,
-			boolean writableStackTrace) {
+	public CalculFactureException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
 

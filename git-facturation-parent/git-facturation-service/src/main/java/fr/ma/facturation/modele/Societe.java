@@ -4,12 +4,14 @@ import java.io.Serializable;
 
 public class Societe implements Serializable {
 
-	private static final long	serialVersionUID	= -7901093112406747097L;
+	// Attributs --------------------------------------------------------------
 
 	private String nom;
 	private Adresse adresse;
 	private Contact contact;
 	private String numeroIdentification;
+
+	// Methods ----------------------------------------------------------------
 
 	public String getNom() {
 		return nom;
